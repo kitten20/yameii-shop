@@ -1,0 +1,15 @@
+@import '../../style.import.scss';
+
+.main-container {
+    padding: 85px $main-padding 10px $main-padding;
+    max-width: 1920px;
+    margin: auto;
+
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        padding: 85px $main-padding-adaptive 10px $main-padding-adaptive;
+    }
+}

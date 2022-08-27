@@ -1,0 +1,68 @@
+@import "../../style.import.scss";
+
+.cart {
+    display: flex;
+    justify-content: space-between;
+
+    &__column {
+        position: relative;
+
+        &:nth-child(1) {
+            width: 79%;
+            height: 665px;
+            padding: 5px;
+
+            overflow-y: scroll;
+
+            border: 1px dashed $main-color;
+            border-radius: $main-border;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+
+        &:nth-child(2) {
+            width: 20%;
+            padding: 5px;
+
+            h3 {
+                font-size: 18px;
+
+                margin-bottom: 5px;
+
+                span {
+                    text-decoration: underline;
+                }
+            }
+
+            button {
+                background-color: $main-color;
+                text-transform: uppercase;
+                color: white;
+                border-radius: $main-border;
+
+                padding: 7px;
+            }
+        }
+    }
+
+    &-no-items {
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h2{
+            font-size: 23px;
+        }
+
+        a{
+            font-size: 18px;
+            color: $main-color;
+        }
+    }
+}

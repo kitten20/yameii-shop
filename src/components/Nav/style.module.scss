@@ -6,11 +6,18 @@
 
     padding: 20px $main-padding;
     width: 100%;
+    max-width: 1920px;
+    margin: auto;
 
     background-color: white;
     border-bottom: 2px dashed $main-color;
+    border-left: 2px dashed $main-color;
+    border-right: 2px dashed $main-color;
 
     position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
 
     &__column {
         display: flex;
@@ -52,6 +59,12 @@
             color: white;
 
             height: 100%;
+        }
+
+        p{
+            margin-left: 5px;
+
+            font-size: 18px;
         }
     }
 

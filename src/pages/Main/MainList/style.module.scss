@@ -1,0 +1,130 @@
+@import "../../../style.import.scss";
+
+.list {
+    &-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 10px;
+        align-items: center;
+    }
+
+    &__item {
+        text-align: center;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+
+        height: 100%;
+        padding: 7px;
+
+        border: 1px solid $main-color;
+        border-radius: $main-border;
+        text-decoration: none;
+        color: black;
+        box-shadow: 3px 3px 5px 0px $main-color;
+
+        h1,
+        button {
+            margin: 7px 0;
+        }
+
+        h1 {
+            font-size: 20px;
+        }
+
+        button {
+            font-size: 16px;
+
+            background-color: $main-color;
+            color: white;
+            border: none;
+            border-radius: $main-border;
+
+            padding: 5px 7px;
+            margin: 0 auto;
+            width: max-content;
+
+            cursor: pointer;
+        }
+
+        img {
+            height: 150px;
+
+            border: 2px solid $main-color;
+            border-radius: 500px;
+        }
+    }
+
+    &__row {
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 1650px) {
+    .list {
+        &-container {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        &__item {
+            h1 {
+                font-size: 18px;
+            }
+
+            button {
+                font-size: 13px;
+            }
+
+            img {
+                border-radius: 500px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .list {
+        &-container {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .list {
+        &-container {
+            grid-template-columns: 1fr;
+        }
+
+        &__item {
+            width: 450px;
+            margin: auto;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .list {
+        &__item {
+            width: 95%;
+
+            h1 {
+                font-size: 15px;
+            }
+
+            button {
+                font-size: 11px;
+            }
+
+            img {
+                height: 120px;
+            }
+        }
+    }
+}

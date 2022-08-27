@@ -1,0 +1,69 @@
+@import "../../style.import.scss";
+
+.card {
+    display: flex;
+    justify-content: space-between;
+
+    &__column {
+        width: 543px;
+
+        &:nth-child(2) {
+            width: calc(100% - 543px);
+            padding: 20px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        img {
+            width: 543px;
+            height: 543px;
+        }
+
+        h1,
+        p,
+        button {
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 30px;
+        }
+
+        p,
+        button, input {
+            font-size: 20px;
+        }
+
+        p {
+            margin: 10px 0 20px 0;
+        }
+
+        button,
+        input {
+            padding: 5px 8px;
+
+            border-radius: $main-border;
+            color: white;
+            background-color: $main-color;
+
+            outline: $main-color;
+        }
+
+        button {
+            display: inline;
+
+            border: none;
+            cursor: pointer;
+
+            width: max-content;
+        }
+
+        input{
+            margin-left: 10px;
+
+            border: 2px dashed white;
+        }
+    }
+}
