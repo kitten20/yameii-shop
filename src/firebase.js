@@ -4,7 +4,7 @@ import {
 import {
     getFirestore,
     collection,
-    getDocs
+    getDocs,
 } from 'firebase/firestore'
 
 const firebaseConfig = {
@@ -20,5 +20,9 @@ const firebaseConfig = {
 initializeApp(firebaseConfig);
 
 const db = getFirestore()
-const colRef = collection(db, "products")
-export const products = getDocs(colRef)
+
+const colRefProducts = collection(db, "products")
+export const products = getDocs(colRefProducts)
+
+const colRefOrders = collection(db, "orders")
+export const orders = getDocs(colRefOrders)

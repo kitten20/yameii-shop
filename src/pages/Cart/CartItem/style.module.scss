@@ -29,25 +29,8 @@
         }
 
         button {
-            background-color: $main-color;
-            border-radius: $main-border;
-            color: white;
-            line-height: normal;
-
-            cursor: pointer;
-
             display: flex;
             align-items: center;
-
-            padding: 5px;
-
-            transition: 250ms all;
-
-            &.active {
-                background-color: rgb(216 146 179);
-
-                transition: 250ms all;
-            }
 
             img {
                 width: 25px;
@@ -84,7 +67,6 @@
         }
 
         &__amount {
-
             &,
             div {
                 display: flex;

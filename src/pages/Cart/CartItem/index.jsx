@@ -52,7 +52,7 @@ function CartItem({ cart, item, deleteItem, setCart }) {
                                     <img src={minus} alt="" />
                                 </button>
                             ) : (
-                                <button className={module.active} onClick={openUpper}>
+                                <button style={{ backgroundColor: "rgb(216 146 179)" }} onClick={openUpper}>
                                     <img src={minus} alt="" />
                                 </button>
                             )}
@@ -97,7 +97,7 @@ function CartItem({ cart, item, deleteItem, setCart }) {
                     <button onClick={openUpper}>Оставить</button>
                 </div>
             </div>
-        </div>
+        </div >
     );
 }
 

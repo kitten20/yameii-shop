@@ -11,13 +11,8 @@ import './style.main.scss'
 function App() {
   const setProducts = useProductsStore(state => state.setProducts)
 
-  useEffect(() => {
-    products.then(s => s.docs.forEach(i =>
-      setProducts(i.data())
-    ))
-    
-    // eslint-disable-next-line
-  }, [])
+  // eslint-disable-next-line
+  useEffect(() => { products.then(s => s.docs.forEach(i => setProducts(i.data()))) }, [])
 
   return (
     <>

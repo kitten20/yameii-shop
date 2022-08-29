@@ -14,7 +14,6 @@ const productsStore = (set) => ({
 
 const cartStore = (set) => ({
     cart: [],
-    cartPrice: 0,
 
     setCart: (i) => set((state) => ({
         cart: [i, ...state.cart]
@@ -23,9 +22,25 @@ const cartStore = (set) => ({
     deleteItem: (i) => set((state) => ({
         cart: state.cart.filter(f => f !== i)
     })),
+
+    clearCart: () => set(() => ({
+        cart: []
+    })),
+})
+
+const ordersStore = (set) => ({
+    orders: [],
+
+    setOrder: (i) => set((state) => ({
+        orders: [i, ...state.orders]
+    })),
 })
 
 export const useProductsStore = create(productsStore)
 export const useCartStore = create(persist(cartStore, {
     name: "cart"
+}))
+
+export const useOrdersStore = create(persist(ordersStore, {
+    name: "orders"
 }))
