@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/yameii-shop/static/css/main.79345c5f.css",
+    "main.css": "/yameii-shop/static/css/main.3b770351.css",
     "main.js": "/yameii-shop/static/js/main.00e84898.js",
     "static/media/plus.png": "/yameii-shop/static/media/plus.d460e9f71ea9d7221a4b.png",
     "static/media/minus.png": "/yameii-shop/static/media/minus.084898678c81675f2e84.png",
     "static/media/cross.svg": "/yameii-shop/static/media/cross.25c8437799a7505567b822e4994c75db.svg",
     "index.html": "/yameii-shop/index.html",
-    "main.79345c5f.css.map": "/yameii-shop/static/css/main.79345c5f.css.map",
+    "main.3b770351.css.map": "/yameii-shop/static/css/main.3b770351.css.map",
     "main.00e84898.js.map": "/yameii-shop/static/js/main.00e84898.js.map"
   },
   "entrypoints": [
-    "static/css/main.79345c5f.css",
+    "static/css/main.3b770351.css",
     "static/js/main.00e84898.js"
   ]
 }
