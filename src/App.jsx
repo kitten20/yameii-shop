@@ -13,10 +13,7 @@ function App() {
   const setDataOrders = useDataOrdersStore(state => state.setDataOrders)
 
   // eslint-disable-next-line
-  useEffect(() => {
-    products.then(s => s.docs.forEach(i => setProducts(i.data())))
-    orders.then(s => s.docs.forEach(i => setDataOrders(i.data())))
-  }, [])
+  useEffect(() => { products.then(s => s.docs.forEach(i => setProducts(i.data()))); orders.then(s => s.docs.forEach(i => setDataOrders(i.data()))) }, [])
 
   return (
     <>
