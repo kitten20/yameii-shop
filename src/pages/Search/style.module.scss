@@ -103,6 +103,22 @@
 
 @media (max-width: 768px) {
     .search {
+        &__block{
+            h2{
+                text-align: center;
+
+                margin-bottom: 10px;
+            }
+        }
+
+        &__item{
+            justify-content: center;
+
+            border-top: 2px dashed $main-color;
+
+            padding-top: 10px;
+        }
+
         &-title {
             font-size: 25px;
         }
