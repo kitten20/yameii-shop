@@ -26,7 +26,7 @@ function Nav() {
                 <NavLink to="/">Yameii Shop</NavLink>
 
                 <div className={module["nav-adaptive"]}>
-                    <Link to="/about" className={module["nav-cart"]}>
+                    <Link to="/cart" className={module["nav-cart"]}>
                         <img src={cart} alt="" />
 
                         <p>

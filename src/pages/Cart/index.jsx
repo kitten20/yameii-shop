@@ -2,6 +2,7 @@ import { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { doc, setDoc, getFirestore } from "firebase/firestore";
 import { v4 as uuidv4 } from 'uuid'
+import moment from 'moment';
 
 import { useCartStore, useOrdersStore } from '../../store'
 
@@ -48,7 +49,8 @@ function Cart() {
             city = cityRef.current.value,
             street = streetRef.current.value,
             apartment = apartmentRef.current.value,
-            sumPrice = cartPrice;
+            sumPrice = cartPrice,
+            date = moment().format('LLL');
 
         const uid = uuidv4() + ""
         setItemCode(uid)
@@ -60,6 +62,7 @@ function Cart() {
             street,
             apartment,
             sumPrice,
+            date,
             items: cart
         }
 

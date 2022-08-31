@@ -51,6 +51,7 @@ function Search() {
                     <h3>Город - {order.city}</h3>
                     <h3>Адрес - {order.street}, кв.{order.apartment}</h3>
                     <h3>На общую сумму в {order.sumPrice} рублей</h3>
+                    <h3>Когда был заказан: {order.date}</h3>
 
                     {order.items.map(i => (
                         <div className={module.search__item} key={i.id}>
@@ -70,7 +71,7 @@ function Search() {
 
             {orders.length > 0 ? (
                 <Accordion className={module["search-accordion"]} allowZeroExpanded>
-                    <h1 className={module["search-accordion-title"]}>Ваши заказанные товары:</h1>
+                    <h1 className={module["search-title"]}>Ваши заказанные товары</h1>
 
                     {orders.map(i => (
                         <AccordionItem className={module["search-accordion__item"]} key={i.id}>
@@ -90,6 +91,7 @@ function Search() {
                                         <h3>ФИО - {i.name};</h3>
                                         <h3>Адрес - г.{i.city}, ул.{i.street}, кв.{i.apartment};</h3>
                                         <h3>На общую сумму в {i.sumPrice} рублей;</h3>
+                                        <h3>Когда был заказан: {i.date}</h3>
                                     </div>
 
                                     <div className={module["search-accordion__products"]}>

@@ -67,3 +67,48 @@
         }
     }
 }
+
+@media (max-width: 1200px) {
+    .card{
+        flex-direction: column;
+
+        &__column{
+            &:nth-child(1), &:nth-child(2){
+                width: 100%;
+
+                text-align: center;
+
+                img{
+                    width: 276px;
+                    height: 276px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 540px) {
+    .card{
+        &__column{
+            &:nth-child(1), &:nth-child(2){
+                img{
+                    width: 138px;
+                    height: 138px;
+                }
+
+                h1{
+                    font-size: 20px;
+                }
+
+                p, button, input{
+                    font-size: 16px;
+                    text-align: center;
+                }
+
+                p{
+                    margin: 10px 0 10px 0;
+                }
+            }
+        }
+    }
+}
