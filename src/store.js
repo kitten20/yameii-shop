@@ -36,11 +36,19 @@ const ordersStore = (set) => ({
     })),
 })
 
-export const useProductsStore = create(productsStore)
-export const useCartStore = create(persist(cartStore, {
-    name: "cart"
-}))
+const dataOrdersStore = (set) => ({
+    dataOrders: [],
 
+    setDataOrders: (i) => set((state) => ({
+        dataOrders: [i, ...state.dataOrders]
+    })),
+})
+
+export const useProductsStore = create(productsStore)
+export const useDataOrdersStore = create(dataOrdersStore)
 export const useOrdersStore = create(persist(ordersStore, {
     name: "orders"
+}))
+export const useCartStore = create(persist(cartStore, {
+    name: "cart"
 }))

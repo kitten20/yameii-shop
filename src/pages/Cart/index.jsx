@@ -47,28 +47,24 @@ function Cart() {
         let name = nameRef.current.value,
             city = cityRef.current.value,
             street = streetRef.current.value,
-            apartment = apartmentRef.current.value;
+            apartment = apartmentRef.current.value,
+            sumPrice = cartPrice;
 
         const uid = uuidv4() + ""
         setItemCode(uid)
 
-        setDoc(doc(db, "orders", uid), {
+        const docObject = {
             id: uid,
             name,
             city,
             street,
             apartment,
+            sumPrice,
             items: cart
-        });
+        }
 
-        setOrder({
-            id: uid,
-            name,
-            city,
-            street,
-            apartment,
-            items: cart
-        })
+        setDoc(doc(db, "orders", uid), docObject);
+        setOrder(docObject)
 
         showCreatePopup(e)
         createRef.current.reset()
@@ -155,7 +151,7 @@ function Cart() {
                 >
                     <h1>Ваш код, по которому Вы можете отслеживать товар</h1>
                     <h2>{itemCode}</h2>
-                    <p>Сохраните его, чтобы отслеживать перемещение товара на вкладке "Где мой товар"</p>
+                    <p>Сохраните его, чтобы отслеживать перемещение товара на вкладке <Link to="/where-is-my-order">"Где Мой Товар"</Link></p>
                     <button onClick={() => locationRef.current.classList.toggle(module["cart__popup_active"])}>Закрыть</button>
                 </div>
             </div>

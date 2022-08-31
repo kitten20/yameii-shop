@@ -44,7 +44,7 @@ function Nav() {
 
             <div className={module.nav__column}>
                 <NavLink to="/">О нас</NavLink>
-                <NavLink to="/">Где мой товар</NavLink>
+                <NavLink to="/where-is-my-order">Где мой товар</NavLink>
                 <Link to="/cart" className={module["nav-cart"] + " " + module["nav-cart_pc"]}>
                     <img src={cart} alt="" />
 
