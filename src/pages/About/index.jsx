@@ -1,23 +1,23 @@
-import { useEffect, useState } from "react";
-import { Octokit } from 'octokit'
+// import { Octokit } from 'octokit'
 
 import MainContainer from "../../components/MainContainer";
 
 import module from './style.module.scss'
 
 function About() {
-    const [lastCommitDate, setLastCommitDate] = useState([])
+    // const [lastCommitDate, setLastCommitDate] = useState([])
 
-    useEffect(() => {
-        const octokit = new Octokit({
-            auth: process.env.REACT_APP_OCTOKEY
-        })
-        octokit.request('GET /repos/kitten20/yameii-shop/commits', {
-            owner: 'kitten20',
-            repo: 'yameii-shop',
-            branch: 'main'
-        }).then(i => setLastCommitDate(p => [...p, i.data]))
-    }, [])
+    // useEffect(() => {
+    //     const octokit = new Octokit({
+    //         auth: process.env.REACT_APP_OCTOKEY
+    //     })
+    //     octokit.request('GET https://api.github.com/repos/kitten20/yameii-shop/commits', {
+    //         owner: 'kitten20',
+    //         repo: 'yameii-shop',
+    //         branch: 'main',
+    //         method: "GET"
+    //     }).then(i => setLastCommitDate(p => [...p, i.data]))
+    // }, [])
 
     return (
         <MainContainer className={module.about}>
@@ -49,20 +49,21 @@ function About() {
                 <h1>Август-Сентябрь 2022</h1>
             </div>
 
+            {/* 
             {lastCommitDate.length > 0 ? (
                 <div className={module.about__row}>
                     <h1 className={module.about__title}>Лист коммитов с репозитория</h1>
 
                     <div className={module["about-container"]}>
                         {lastCommitDate[0].map(i => (
-                            <div className={module.about__bugfix}>
+                            <div className={module.about__bugfix} key={i.sha}>
                                 <h1>{i.commit.message}</h1>
                                 <p>{(i.commit.committer.date).replace('T', ' | ').replace('Z', '')}</p>
                             </div>
                         ))}
                     </div>
                 </div>
-            ) : ""}
+            ) : ""} */}
         </MainContainer>
     );
 }
