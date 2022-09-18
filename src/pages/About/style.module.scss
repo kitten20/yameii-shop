@@ -1,0 +1,78 @@
+@import "../../style.import.scss";
+
+.about {
+    &__row {
+        text-align: center;
+
+        padding-bottom: 10px;
+
+        &:not(.about__row:last-child) {
+            border-bottom: 2px dashed $main-color;
+        }
+
+        h1 {
+            margin: 10px 0;
+
+            font-size: 30px;
+        }
+
+        h2 {
+            font-size: 22px;
+        }
+
+        p{
+            font-size: 16px;
+        }
+
+        &_date{
+            padding: 15px 0;
+            
+            color: $main-color;
+
+            h1{
+                margin: 0;
+            }
+        }
+    }
+
+    &__bugfix {
+        background-color: $main-color;
+        border-radius: $main-border;
+        color: white;
+
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about__row{
+        h1{
+            font-size: 25px;
+        }
+
+        h2{
+            font-size: 18px;
+        }
+
+        p{
+            font-size: 14px;
+        }
+    }
+}
+
+@media (max-width: 460px) {
+    .about__row{
+        h1{
+            font-size: 22px;
+        }
+
+        h2{
+            font-size: 15px;
+        }
+
+        p{
+            font-size: 12px;
+        }
+    }
+}

@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { useProductsStore, useCartStore } from '../../store'
 
 import MainContainer from "../../components/MainContainer";
@@ -14,6 +14,7 @@ function Item() {
     const cart = useCartStore(state => state.cart)
 
     const numberRef = useRef("")
+    const [initialValue, setInitialValue] = useState(1)
 
     const findProduct = products.find(i => i.id === params.id)
     const findCart = cart.find(f => f.id === params.id)
@@ -63,7 +64,7 @@ function Item() {
                             Добавить в корзину
                         </button>
 
-                        <input type="number" min="1" max="100" placeholder="1" ref={numberRef} />
+                        <input type="number" min="1" max="100" value={initialValue} onChange={e => setInitialValue(e.target.value)} placeholder="1" ref={numberRef} />
                     </div>
 
                     {findCart

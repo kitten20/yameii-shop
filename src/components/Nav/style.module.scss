@@ -123,6 +123,9 @@
 
         transition: $main-transition;
 
+        border-left: none;
+        border-right: none;
+
         &_active {
             height: 167px;
 
