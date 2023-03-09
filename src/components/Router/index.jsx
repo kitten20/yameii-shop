@@ -5,6 +5,7 @@ import About from '../../pages/About'
 import Item from '../../pages/Item'
 import Cart from '../../pages/Cart'
 import Search from '../../pages/Search'
+import Valentine from '../../pages/Valentine'
 
 function Router() {
     return (
@@ -14,6 +15,7 @@ function Router() {
             <Route element={<Item />} path="/item/:id" />
             <Route element={<Cart />} path="/cart" />
             <Route element={<Search />} path="/where-is-my-order" />
+            <Route element={<Valentine />} path="/v-09-03-2023-14-02" />
         </Routes>
     );
 }
