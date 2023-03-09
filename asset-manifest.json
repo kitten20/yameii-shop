@@ -1,16 +1,18 @@
 {
   "files": {
-    "main.css": "/yameii-shop/static/css/main.540efd3d.css",
-    "main.js": "/yameii-shop/static/js/main.315b5c1e.js",
+    "main.css": "/yameii-shop/static/css/main.50a28233.css",
+    "main.js": "/yameii-shop/static/js/main.4a85adaf.js",
+    "static/media/heart-background.jpg": "/yameii-shop/static/media/heart-background.36a8d22a351203cf7ef8.jpg",
+    "static/media/letter.svg": "/yameii-shop/static/media/letter.90987e131d848893d35a51a590c5b730.svg",
     "static/media/plus.png": "/yameii-shop/static/media/plus.d460e9f71ea9d7221a4b.png",
     "static/media/minus.png": "/yameii-shop/static/media/minus.084898678c81675f2e84.png",
     "static/media/cross.svg": "/yameii-shop/static/media/cross.25c8437799a7505567b822e4994c75db.svg",
     "index.html": "/yameii-shop/index.html",
-    "main.540efd3d.css.map": "/yameii-shop/static/css/main.540efd3d.css.map",
-    "main.315b5c1e.js.map": "/yameii-shop/static/js/main.315b5c1e.js.map"
+    "main.50a28233.css.map": "/yameii-shop/static/css/main.50a28233.css.map",
+    "main.4a85adaf.js.map": "/yameii-shop/static/js/main.4a85adaf.js.map"
   },
   "entrypoints": [
-    "static/css/main.540efd3d.css",
-    "static/js/main.315b5c1e.js"
+    "static/css/main.50a28233.css",
+    "static/js/main.4a85adaf.js"
   ]
 }
